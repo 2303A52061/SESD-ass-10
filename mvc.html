@@ -2,110 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVC Architecture</title>
+    <title>MVC Architecture Diagram</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #eef2f3;
-            padding: 30px;
+            background: #f0f3f5;
+            margin: 0;
+            padding: 20px;
         }
 
         h1 {
             text-align: center;
-            color: #1a237e;
+            color: #0b3d91;
+            margin-bottom: 40px;
         }
 
-        .diagram-container {
+        .container {
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: 40px;
-            margin-top: 50px;
         }
 
         .box {
-            width: 260px;
+            width: 280px;
+            background: #ffffff;
             padding: 20px;
-            background: white;
-            border-radius: 10px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
             text-align: center;
-            box-shadow: 0px 0px 12px rgba(0,0,0,0.15);
         }
 
         .box h2 {
-            margin-top: 0;
+            margin: 0;
             color: #0d47a1;
         }
 
-        .box ul {
+        .box p {
+            font-weight: bold;
+            margin-top: 5px;
+            color: #444;
+        }
+
+        ul {
             text-align: left;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .arrow {
-            font-size: 40px;
-            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
         }
 
-        .footer-text {
-            margin-top: 40px;
+        .flow {
+            margin-top: 50px;
             text-align: center;
             font-size: 18px;
-            color: #444;
+            font-weight: bold;
+            color: #333;
         }
     </style>
 
 </head>
 <body>
 
-    <h1>MVC (Model – View – Controller) Architecture</h1>
+    <h1>MVC (Model - View - Controller) Architecture</h1>
 
-    <div class="diagram-container">
+    <div class="container">
 
-        <!-- View -->
+        <!-- VIEW -->
         <div class="box">
             <h2>View</h2>
-            <p><strong>User Interface Layer</strong></p>
+            <p>User Interface Layer</p>
             <ul>
-                <li>Displays data</li>
-                <li>HTML / JSP / Templates</li>
-                <li>Collects user input</li>
+                <li>Displays data to user</li>
+                <li>Receives input from user</li>
+                <li>HTML / JSP / Vue / React</li>
+                <li>No business logic</li>
             </ul>
         </div>
 
         <div class="arrow">➡️</div>
 
-        <!-- Controller -->
+        <!-- CONTROLLER -->
         <div class="box">
             <h2>Controller</h2>
-            <p><strong>Application Logic Layer</strong></p>
+            <p>Application Logic Layer</p>
             <ul>
-                <li>Handles requests</li>
-                <li>Calls Model methods</li>
-                <li>Selects appropriate View</li>
+                <li>Handles user requests</li>
+                <li>Processes input</li>
+                <li>Communicates with Model</li>
+                <li>Chooses which View to show</li>
             </ul>
         </div>
 
         <div class="arrow">➡️</div>
 
-        <!-- Model -->
+        <!-- MODEL -->
         <div class="box">
             <h2>Model</h2>
-            <p><strong>Data & Business Layer</strong></p>
+            <p>Data & Business Logic</p>
             <ul>
                 <li>Database operations</li>
                 <li>Business rules</li>
-                <li>Validations</li>
+                <li>Data validation</li>
+                <li>CRUD operations</li>
             </ul>
         </div>
 
     </div>
 
-    <p class="footer-text">
-        MVC separates the application into three layers for easy development, maintenance, and testing.
-    </p>
+    <div class="flow">
+        Data Flow: View ➜ Controller ➜ Model ➜ Controller ➜ View
+    </div>
 
 </body>
 </html>
