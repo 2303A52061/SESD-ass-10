@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Architecture</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a237e;
+        }
+
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 260px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.15);
+        }
+
+        .box h2 {
+            margin-top: 0;
+            color: #0d47a1;
+        }
+
+        .box ul {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .arrow {
+            font-size: 40px;
+            color: #000;
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>MVC (Model – View – Controller) Architecture</h1>
+
+    <div class="diagram-container">
+
+        <!-- View -->
+        <div class="box">
+            <h2>View</h2>
+            <p><strong>User Interface Layer</strong></p>
+            <ul>
+                <li>Displays data</li>
+                <li>HTML / JSP / Templates</li>
+                <li>Collects user input</li>
+            </ul>
+        </div>
+
+        <div class="arrow">➡️</div>
+
+        <!-- Controller -->
+        <div class="box">
+            <h2>Controller</h2>
+            <p><strong>Application Logic Layer</strong></p>
+            <ul>
+                <li>Handles requests</li>
+                <li>Calls Model methods</li>
+                <li>Selects appropriate View</li>
+            </ul>
+        </div>
+
+        <div class="arrow">➡️</div>
+
+        <!-- Model -->
+        <div class="box">
+            <h2>Model</h2>
+            <p><strong>Data & Business Layer</strong></p>
+            <ul>
+                <li>Database operations</li>
+                <li>Business rules</li>
+                <li>Validations</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <p class="footer-text">
+        MVC separates the application into three layers for easy development, maintenance, and testing.
+    </p>
+
+</body>
+</html>
